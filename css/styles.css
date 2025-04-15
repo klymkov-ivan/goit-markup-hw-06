@@ -35,6 +35,13 @@ button {
 
 /* ---------------HEADER----------------- */
 
+.container {
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
 .webstudio-logo {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -202,28 +209,86 @@ button {
 
 .advantages-section {
   background-color: #ffffff;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .advantages-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .advantage-list-item {
   background-color: #ffffff;
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
 
 .adv-icon-container {
-  border: 1px solid #8e8f99;
+  display: none;
+
+  /* border: 1px solid #8e8f99;
   border-radius: 4px;
   height: 112px;
   display: flex;
   background-color: #f4f4fd;
   margin-bottom: 8px;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+}
+
+.advantage-name {
+  font-weight: 700;
+  font-size: 36px;
+
+  /* line-height: 40px; */
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+
+  margin-bottom: 8px;
+
+  /* font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42; */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+
+  /* font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em; */
+}
+
+/* ---------------TEAM----------------- */
+
+.team-section {
+  background-color: #f4f4fd;
+  padding: 96px 12px;
 }
 
 .icons-list {
@@ -252,46 +317,6 @@ button {
   background-color: #404bbf;
 }
 
-.advantage-name {
-  font-weight: 500;
-  font-size: 20px;
-
-  /* line-height: 24px; */
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.text {
-  font-size: 16px;
-
-  /* line-height: 24px; */
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-/* ---------------TEAM----------------- */
-
-.team-section {
-  background-color: #f4f4fd;
-  padding: 120px 0;
-}
-
 .member-container {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -314,7 +339,8 @@ button {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .team-member .member-name {
@@ -469,13 +495,6 @@ button {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-}
-
-.container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
 }
 
 .footer-icons-list {
@@ -801,4 +820,94 @@ button {
 
 .policy-label {
   color: #4d5ae5;
+}
+
+@media screen and (min-width: 768px) {
+  /* ---------------------Advantages----------------------- */
+
+  .container {
+    width: 768px;
+  }
+
+  .advantage-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .advantages-list {
+    gap: 24px;
+  }
+
+  .advantage-name {
+    text-align: left;
+  }
+
+  /* --------------------------------TEAM--------------------------------- */
+
+  .team-container {
+    width: 768px;
+    padding: 0 108px;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  /* ---------------------Advantages----------------------- */
+
+  .container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .advantages-section {
+    padding: 120px 0;
+  }
+
+  .adv-icon-container {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    height: 112px;
+    display: flex;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .advantages-list {
+    gap: 24px;
+  }
+
+  .advantage-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .advantage-name {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: left;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /* --------------------------------TEAM--------------------------------- */
+
+  .team-section {
+    padding: 120px 0;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
 }
