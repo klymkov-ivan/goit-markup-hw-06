@@ -783,5 +783,22 @@
         document.body.style.overflow = "";
       });
     </script>
+
+    <script>
+      const modalBackdrop = document.querySelector(".backdrop");
+      const modalCloseBtn = document.querySelector(".modal-close-btn");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          modalBackdrop.classList.add("is-open");
+          document.body.style.overflow = "hidden";
+        }, 3000); // 3000 мс = 3 секунди
+      });
+
+      modalCloseBtn.addEventListener("click", () => {
+        modalBackdrop.classList.remove("is-open");
+        document.body.style.overflow = "";
+      });
+    </script>
   </body>
 </html>
