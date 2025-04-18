@@ -365,7 +365,7 @@ button {
 }
 
 .team-container {
-  max-width: 767px;
+  width: 320px;
   padding-left: 28px;
   padding-right: 28px;
 }
