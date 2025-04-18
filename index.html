@@ -22,7 +22,7 @@
   <body>
     <!-----------------HEADER------------------>
 
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a class="webstudio-logo" href="./index.html"
@@ -54,8 +54,84 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mobile-menu-btn">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!----------------------- MOBILE-MENU ------------------------------->
+
+      <div class="mobile-menu">
+        <div>
+          <button type="button" class="mobile-close-btn">
+            <svg class="icon icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobile-nav-menu">
+              <li class="mobile-nav-list-item">
+                <a
+                  class="mobile-nav-menu-item mobile-studio"
+                  href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-nav-list-item">
+                <a class="mobile-nav-menu-item" href="">Portfolio</a>
+              </li>
+              <li class="mobile-nav-list-item">
+                <a class="mobile-nav-menu-item" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <address class="mobile-contact-info">
+            <ul class="mobile-contacts-list">
+              <li>
+                <a class="mobile-contact cell-number" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a class="mobile-contact" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-icons-list">
+            <li class="mobile-icon-list-item">
+              <a class="mobile-ellipse" href=""
+                ><svg class="mobile-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="mobile-icon-list-item">
+              <a class="mobile-ellipse" href=""
+                ><svg class="mobile-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="mobile-icon-list-item">
+              <a class="mobile-ellipse" href=""
+                ><svg class="mobile-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="mobile-icon-list-item">
+              <a class="mobile-ellipse" href=""
+                ><svg class="mobile-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <!-----------------HERO------------------>
 
@@ -331,7 +407,6 @@
                     src="./images/img1.jpg"
                     alt="Banking App"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -371,7 +446,6 @@
                     src="./images/img2.jpg"
                     alt="Cashless Payment"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -411,7 +485,6 @@
                     src="./images/img3.jpg"
                     alt="Meditation App"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -451,7 +524,6 @@
                     src="./images/img4.jpg"
                     alt="Taxi Service"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -491,7 +563,6 @@
                     src="./images/img6.jpg"
                     alt="Screen Illustrations"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -531,7 +602,6 @@
                     src="./images/img5.jpg"
                     alt="Online Courses"
                     width="360"
-                    height="300"
                   />
                 </picture>
                 <p class="overlay">
@@ -698,5 +768,20 @@
         </form>
       </div>
     </div> -->
+    <script>
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const openMenuBtn = document.querySelector(".mobile-menu-btn");
+      const closeMenuBtn = document.querySelector(".mobile-close-btn");
+
+      openMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("is-open");
+        document.body.style.overflow = "hidden"; // блокуємо скрол сторінки
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("is-open");
+        document.body.style.overflow = ""; // повертаємо скрол
+      });
+    </script>
   </body>
 </html>
