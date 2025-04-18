@@ -168,7 +168,7 @@ button {
 }
 
 .mobile-menu.is-open {
-  display: flex; /* показуємо меню, коли є клас is-open */
+  display: flex;
 }
 
 .mobile-close-btn {
@@ -433,8 +433,6 @@ button {
 
 .section-header {
   font-size: 36px;
-
-  /* line-height: 40px; */
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
@@ -452,8 +450,6 @@ button {
 .team-member .member-name {
   font-weight: 500;
   font-size: 20px;
-
-  /* line-height: 24px; */
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
@@ -463,8 +459,6 @@ button {
 
 .team-member .member-position {
   font-size: 16px;
-
-  /* line-height: 24px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
@@ -510,8 +504,6 @@ button {
 .portfolio-item .project-name {
   font-weight: 500;
   font-size: 20px;
-
-  /* line-height: 24px; */
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -529,15 +521,13 @@ button {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 16px;
 }
 
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-
-  /* line-height: 21px; */
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -553,21 +543,18 @@ button {
 .motivation-phrase {
   font-weight: 400;
   font-size: 16px;
-
-  /* line-height: 24px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+  text-align: left;
 }
 
 .footer-block {
   display: flex;
-  align-items: baseline;
-}
-
-.motivation-container {
-  margin-right: 120px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .soc-text {
@@ -590,7 +577,7 @@ button {
 }
 
 .soc-container {
-  margin-right: 80px;
+  margin: 72px 40px;
 }
 
 .user-email {
@@ -600,6 +587,7 @@ button {
   height: 40px;
   background: #2e2f42;
   padding: 8px 16px;
+  margin-bottom: 16px;
 }
 
 .user-email {
@@ -621,6 +609,11 @@ button {
   color: #fff;
 }
 
+.subscribe-icon {
+  fill: #fff;
+  margin-left: 16px;
+}
+
 .subscribe-btn {
   border-radius: 4px;
   padding: 8px 24px;
@@ -631,15 +624,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-weight: 500;
   font-size: 16px;
-  /* line-height: 24px; */
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subscribe-btn:hover,
@@ -649,13 +642,8 @@ button {
 
 .subscribe-icon {
   fill: #fff;
-  margin-left: 16px;
 }
 
-.footer-form {
-  display: flex;
-  gap: 24px;
-}
 /* ----------------Modal window----------------- */
 
 .backdrop {
@@ -1003,6 +991,40 @@ button {
     gap: 24px;
     row-gap: 72px;
   }
+
+  /* ------------------------------FOOTER--------------------------------- */
+
+  .footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .motivation-container {
+    text-align: left;
+  }
+
+  .motivation-phrase {
+    width: 264px;
+  }
+
+  .soc-container {
+    margin: 0 0 104px 24px;
+  }
+
+  .soc-text {
+    text-align: left;
+  }
+
+  .footer-form {
+    display: flex;
+    gap: 24px;
+  }
+
+  .user-email {
+    margin-bottom: 0;
+  }
 }
 
 /* =============================DESKTOP============================ */
@@ -1136,8 +1158,6 @@ button {
     position: absolute;
     font-weight: 400;
     font-size: 16px;
-
-    /* line-height: 24px; */
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
@@ -1147,7 +1167,6 @@ button {
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
-
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
   }
@@ -1159,5 +1178,46 @@ button {
   .portfolio-item:hover {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
       0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  /* ------------------------------FOOTER--------------------------------- */
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .logo-footer {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .footer-block {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+
+  .motivation-container {
+    margin-right: 120px;
+    text-align: left;
+  }
+
+  .soc-container {
+    margin: 0;
+    margin-right: 80px;
+  }
+
+  .subscribe-icon {
+    fill: #fff;
+    margin-left: 16px;
+  }
+
+  .footer-form {
+    display: flex;
+    gap: 24px;
+  }
+  .soc-text {
+    text-align: left;
   }
 }
