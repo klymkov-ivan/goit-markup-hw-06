@@ -52,15 +52,15 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  padding-top: 24px;
-  padding-bottom: 24px;
   margin-right: 76px;
 }
 
 .mobile-menu-btn {
-  margin: 24px 0;
+  height: 24px;
   border: none;
   background-color: transparent;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .accent {
@@ -76,6 +76,7 @@ button {
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-navigation {
@@ -130,7 +131,7 @@ button {
   font-style: normal;
 }
 
-.contacts-list {
+.contact-info {
   display: none;
 }
 
@@ -183,17 +184,13 @@ button {
   stroke: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.icon {
-}
-.icon-close {
-}
+
 .mobile-nav-menu {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
-.mobile-nav-list-item {
-}
+
 .mobile-nav-menu-item {
   font-weight: 700;
   font-size: 36px;
@@ -204,17 +201,18 @@ button {
 .mobile-studio {
   color: #404bbf;
 }
-.mobile-contact-info {
-}
+
 .mobile-contacts-list {
   margin-bottom: 48px;
 }
+
 .mobile-contact {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
+  font-style: normal;
 }
 
 .cell-number {
@@ -227,8 +225,7 @@ button {
   display: flex;
   gap: 40px;
 }
-.mobile-icon-list-item {
-}
+
 .mobile-ellipse {
   width: 40px;
   height: 40px;
@@ -494,7 +491,7 @@ button {
 
 .footer {
   background-color: #2e2f42;
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 
 .logo-footer {
@@ -556,14 +553,11 @@ button {
 .user-email {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   background: #2e2f42;
   padding: 8px 16px;
   margin-bottom: 16px;
-}
-
-.user-email {
   color: #fff;
   background-color: transparent;
   font-size: 12px;
@@ -639,7 +633,6 @@ button {
 .modal-window {
   border-radius: 4px;
   width: 288px;
-  height: 623px;
   background-color: #ffffff;
   background: #fcfcfc;
   position: absolute;
@@ -647,7 +640,7 @@ button {
   left: 50%;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
@@ -868,6 +861,10 @@ button {
     display: none;
   }
 
+  .mobile-menu.is-open {
+    display: none;
+  }
+
   .webstudio-logo {
     margin-right: 120px;
   }
@@ -880,7 +877,11 @@ button {
     display: flex;
   }
 
-  .contacts-list {
+  .contacts-list li:first-child {
+    margin-bottom: 12px;
+  }
+
+  .contact-info {
     display: block;
     padding: 16px 0;
   }
@@ -932,6 +933,7 @@ button {
 
   .advantages-list {
     gap: 24px;
+    row-gap: 72px;
   }
 
   .advantage-name {
@@ -947,6 +949,7 @@ button {
 
   .team-list {
     gap: 24px;
+    row-gap: 64px;
   }
 
   /* --------------------------PORTFOLIO------------------------- */
@@ -967,6 +970,8 @@ button {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: baseline;
+    padding-left: 108px;
+    padding-right: 164px;
   }
 
   .motivation-container {
@@ -992,14 +997,15 @@ button {
 
   .user-email {
     margin-bottom: 0;
+    width: 264px;
   }
 
   /* -------------------MODAL-WINDOW---------------------- */
 
   .modal-window {
     width: 408px;
-    min-height: 584px;
     top: 45%;
+    padding: 72px 24px 24px 24px;
   }
 }
 
@@ -1018,8 +1024,7 @@ button {
 
   .contacts-list {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
+
     gap: 40px;
   }
 
@@ -1027,6 +1032,10 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+  }
+
+  .contacts-list li:first-child {
+    margin-bottom: 0;
   }
 
   /* --------------------------HERO------------------------- */
@@ -1193,6 +1202,7 @@ button {
     display: flex;
     gap: 24px;
   }
+
   .soc-text {
     text-align: left;
   }
@@ -1202,7 +1212,6 @@ button {
   .modal-window {
     border-radius: 4px;
     width: 408px;
-    min-height: 584px;
     background-color: #ffffff;
     background: #fcfcfc;
     position: absolute;
